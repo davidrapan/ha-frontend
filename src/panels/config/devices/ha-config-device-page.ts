@@ -1447,7 +1447,7 @@ export class HaConfigDevicePage extends LitElement {
           display: flex;
           flex-wrap: wrap;
           margin: auto;
-          max-width: 1000px;
+          max-width: var(--ha-config-devices-max-width, 1000px);
           margin-top: 32px;
           margin-bottom: 32px;
         }
@@ -1503,8 +1503,11 @@ export class HaConfigDevicePage extends LitElement {
           box-sizing: border-box;
         }
         .column {
-          width: 33%;
+          width: var(--ha-config-devices-column-width, 33%);
           flex-grow: 1;
+        }
+        .column:first-child, .column:last-child {
+          width: var(--ha-config-devices-side-column-width, 33%);
         }
         .fullwidth {
           width: 100%;
