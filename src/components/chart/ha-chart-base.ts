@@ -483,7 +483,7 @@ export class HaChartBase extends LitElement {
       backgroundColor: "transparent",
       textStyle: {
         color: style.getPropertyValue("--primary-text-color"),
-        fontFamily: "Roboto, Noto, sans-serif",
+        fontFamily: style.getPropertyValue("--ha-font-family-body"),
       },
       title: {
         textStyle: { color: style.getPropertyValue("--primary-text-color") },
